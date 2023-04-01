@@ -1,5 +1,6 @@
 import './App.css';
 import { ThreadList } from './ThreadList';
+import { AddThread } from './AddThread';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       </header>
       <div>
         {ThreadList()}
+        {AddThread()}
       </div>
     </div>
   );

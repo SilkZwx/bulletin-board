@@ -10,7 +10,7 @@ export const ThreadList = () => {
     const [threads, setThreads] = React.useState([]);
 
     useEffect(() => {
-        fetch('https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/threads?offset=' + startId)
+        fetch('https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/threads?offset=' + startId, {method: 'GET'})
         .then(res => {
             return res.json();
         })
