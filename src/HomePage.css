@@ -1,0 +1,12 @@
+.Page {
+  display: flex;
+}
+
+.Thread-list {
+  padding: 15px;
+}
+
+.Add-thread {
+  margin-left: auto;
+  padding: 15px;
+}

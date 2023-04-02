@@ -1,18 +1,23 @@
 import './App.css';
-import { ThreadList } from './ThreadList';
-import { AddThread } from './AddThread';
+import { BrowserRouter, Link} from 'react-router-dom';
+import { Router } from './Router';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Hello
-      </header>
-      <div>
-        {ThreadList()}
-        {AddThread()}
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <h3 className="App-title">
+            <Link to={"/"} style={{ textDecoration: 'none', color: 'inherit'  }}>掲示板</Link>
+          </h3>
+          <div className="App-link">
+            <Link to={"/Thread/new"} style={{ textDecoration: 'none', color: 'inherit' }}>新しいスレッドを作成</Link>
+          </div>
+        </header>
       </div>
-    </div>
+      <Router />
+    </BrowserRouter>
   );
 }
 
