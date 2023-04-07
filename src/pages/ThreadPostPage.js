@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { PostList } from "./PostList";
+import { PostList } from "../components/PostList";
 
 export const ThreadPostPage = () => {
   const { id, title } = useParams();

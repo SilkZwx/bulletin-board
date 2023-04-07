@@ -13,11 +13,11 @@ export const PostList = (props) => {
     );
   }
 
-  let startId = 0;
+  let offset = 0;
   const [posts, setPosts] = React.useState(null)
 
   useEffect(() => {
-    fetch('https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/threads/' + props.id + '/posts?offset='+ startId, {
+    fetch('https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/threads/' + props.id + '/posts?offset='+ offset, {
       method: 'GET', headers: {'accept': 'application/json'}
     })
     .then(res => res.json())
@@ -33,7 +33,7 @@ export const PostList = (props) => {
     return null;
   }
 
-  if (posts.length == 0) {
+  if (posts.length === 0) {
     return (
       <div style={{border: '3px solid black', boxSizing: 'border-box', fontSize: '30px', width: '600px', margin: '0 auto'}} >
         まだ投稿はありません

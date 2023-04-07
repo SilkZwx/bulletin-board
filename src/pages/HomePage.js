@@ -1,17 +1,17 @@
 import React from "react";
 import './HomePage.css';
-import { AddThread } from "./AddThread";
-import { ThreadList } from "./ThreadList";
+import { AddThread } from "../components/AddThread";
+import { ThreadList } from "../components/ThreadList";
 
 export const HomePage = () => {
   return (
     <div className="Page">
       <div className="Thread-list">
         <div style={{fontSize: "60px", padding: "10px"}}>スレッド一覧</div>
-        {ThreadList()}
+        <ThreadList />
       </div>
       <div className="Add-thread">
-        {AddThread()}
+        <AddThread />
       </div>
     </div>
   );

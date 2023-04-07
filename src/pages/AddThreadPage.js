@@ -1,10 +1,11 @@
 import React from "react";
-import { AddThread } from "./AddThread";
+import './AddThreadPage.css';
+import { AddThread } from "../components/AddThread";
 
 export const AddThreadPage = () => {
   return (
     <div className="Add-thread">
-        {AddThread()}
+        <AddThread />
     </div>
   );
 }

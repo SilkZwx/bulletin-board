@@ -1,0 +1,21 @@
+.App-header {
+  background-color: green;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.App-title {
+  color: antiquewhite;
+  padding: 10px;
+}

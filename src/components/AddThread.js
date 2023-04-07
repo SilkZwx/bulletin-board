@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 export const AddThread = () => {
   const [inputValue, setInputValue] = React.useState('');
@@ -15,11 +15,10 @@ export const AddThread = () => {
         'accept': 'application/json'
       },
       body: JSON.stringify({"title": inputValue})
-      
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data.title);
+      console.log(data);
     })
     .catch(reason =>{
       console.log(reason);

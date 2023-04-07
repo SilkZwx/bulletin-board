@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import { HomePage } from './HomePage';
-import { AddThreadPage} from './AddThreadPage';
-import { ThreadPostPage } from "./ThreadPostPage";
+import { HomePage } from '../pages/HomePage';
+import { AddThreadPage} from '../pages/AddThreadPage';
+import { ThreadPostPage } from "../pages/ThreadPostPage";
 
 export const Router = () => {
   return (
