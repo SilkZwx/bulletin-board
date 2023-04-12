@@ -1,10 +1,12 @@
 import React from "react";
 import { useContext } from "react";
 import { myThreadList } from "../App";
+import { useNavigate } from "react-router-dom";
 
 export const AddThread = () => {
   const [inputValue, setInputValue] = React.useState('');
   const {myThreads, setMyThreads} = useContext(myThreadList);
+  const navigate = useNavigate();
 
   function handleInput(event) {
     setInputValue(event.target.value);
@@ -24,6 +26,7 @@ export const AddThread = () => {
       setMyThreads([...myThreads, {id: data.id, title: data.title}]);
       console.log(data);
       console.log(myThreads);
+      navigate('/');
     })
     .catch(reason =>{
       console.log(reason);
