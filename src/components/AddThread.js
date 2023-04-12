@@ -1,7 +1,10 @@
 import React from "react";
+import { useContext } from "react";
+import { myThreadList } from "../App";
 
 export const AddThread = () => {
   const [inputValue, setInputValue] = React.useState('');
+  const {myThreads, setMyThreads} = useContext(myThreadList);
 
   function handleInput(event) {
     setInputValue(event.target.value);
@@ -18,7 +21,9 @@ export const AddThread = () => {
     })
     .then(res => res.json())
     .then(data => {
+      setMyThreads([...myThreads, {id: data.id, title: data.title}]);
       console.log(data);
+      console.log(myThreads);
     })
     .catch(reason =>{
       console.log(reason);

@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.My-thread-list {
+  padding: 15px;
+}
+
 .Thread-list {
   padding: 15px;
 }

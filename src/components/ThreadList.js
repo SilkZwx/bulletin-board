@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { ShowThread } from "./ShowThread";
 
 
 export const ThreadList = () => {
@@ -12,16 +12,6 @@ export const ThreadList = () => {
 			setStartId(offset-10);
 		}
 	}
-
-  function ShowThreads(thread, index) {
-    return (
-      <Link to={'/thread/'+thread.id+'/'+thread.title} style={{ textDecoration: 'none', color: 'inherit'  }} key={index}>
-        <div style={{border: '3px solid black', boxSizing: 'border-box', fontSize: '30px', width: '600px', margin: '0 auto'}} >
-          {thread.title}
-       </div>
-      </Link>
-    );
-  }
 
   const [offset, setStartId] = React.useState(0);
   const [threads, setThreads] = React.useState([]);
@@ -41,7 +31,7 @@ export const ThreadList = () => {
 
   return(
     <div>
-			{threads.map(ShowThreads)}
+			{threads.map(thread => <ShowThread id={thread.id} title={thread.title} key={thread.id} />)}
 			<button type={"button"} onClick={PrevThreads} style={{padding: "10px"}}>戻る</button>
 			<button type={"button"} onClick={NextThreads} style={{padding: "10px"}}>進む</button>
     </div>
