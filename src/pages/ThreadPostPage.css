@@ -1,0 +1,13 @@
+.Page {
+  display: flex;
+}
+
+.Post-list {
+  padding: 15px;
+}
+
+.Add-post {
+  position: relative;
+  top: 100px;
+  left: 30px;
+}

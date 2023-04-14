@@ -1,5 +1,5 @@
 import React from "react";
-import './HomePage.css';
+import "./HomePage.css";
 import { AddThread } from "../components/AddThread";
 import { ThreadList } from "../components/ThreadList";
 import { MyThreadList } from "../components/MyThreadList";

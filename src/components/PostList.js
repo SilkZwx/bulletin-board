@@ -14,20 +14,20 @@ export const PostList = (props) => {
   }
 
   let offset = 0;
-  const [posts, setPosts] = React.useState(null)
+  const { posts, setPosts, id } = props;
 
   useEffect(() => {
-    fetch('https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/threads/' + props.id + '/posts?offset='+ offset, {
+    fetch('https://2y6i6tqn41.execute-api.ap-northeast-1.amazonaws.com/threads/' + id + '/posts?offset='+ offset, {
       method: 'GET', headers: {'accept': 'application/json'}
     })
     .then(res => res.json())
     .then(data => {
-      setPosts(data.posts)
+      setPosts(data.posts);
     })
     .catch(reason => {
-      console.log(reason)
+      console.log(reason);
     });
-  }, [])
+  }, [offset, setPosts, id])
 
   if (!posts){
     return null;
